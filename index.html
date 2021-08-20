@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+<div class="list-inline">
+    <span class="border border-bottom-0 border-dark"><a href="#" class="list-inline-item "><b>General</b></a></span>
+    <a href="#" class="list-inline-item"><b>Attachment</b></a>
+</div>
+<hr class="px-3">
+<nav class="navbar navbar-light bg-primary py-3" ></nav>
+<h3 class="text-danger">Vehicle Details</h3>
+<hr class="border border-primary">
+<form method="post">
+    <table>
+    {% csrf_token %}
+        {{ form }}
+    </table>
+</form><br><br>
+
+
+<h3 class="text-danger">Engine Details</h3>
+<hr class="border border-primary">
+<form method="post">
+    <table>
+    {% csrf_token %}
+        {{ Form }}
+
+    </table>
+</form>
+</body>
+</html>
